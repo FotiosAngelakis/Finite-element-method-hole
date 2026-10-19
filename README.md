@@ -41,7 +41,7 @@ The shear modulus is computed as G = E / (2(1 + ν)).
 ## Installation
 
 ```bash
-git clone https://github.com/<user>/fem-plate-hole.git
+git clone https://github.com/FotiosAngelakis/fem-plate-hole.git
 cd fem-plate-hole
 pip install -e .          # core: numpy, scipy, matplotlib
 pip install -e .[app]     # + streamlit, plotly (web app)

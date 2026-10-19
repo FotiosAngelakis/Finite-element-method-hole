@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "platefem"
+version = "1.0.0"
+description = "2D plane-stress FEM (CST) analysis of a plate with a central hole: tension, bending, notch factors and mesh studies"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.22", "scipy>=1.8", "matplotlib>=3.5"]
+keywords = ["finite element", "FEM", "plane stress", "stress concentration", "CST"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Education",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.50", "plotly>=5.20"]
+dev = ["pytest>=7", "streamlit>=1.50", "plotly>=5.20"]
+
+[project.scripts]
+platefem = "platefem.cli:main"
+
+[tool.setuptools]
+packages = ["platefem"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
